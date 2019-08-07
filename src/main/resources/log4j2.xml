@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="WARN">
+    <appenders>
+
+
+        <File name="FindedSatation" fileName="logs/findedStation.log" immediateFlush="true">
+            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+
+        <File name="ErrorStation" fileName="logs/errorStation.log" immediateFlush="true">
+            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+
+        <File name="errorLog" fileName="logs/errorLog.log" immediateFlush="true">
+            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+
+    </appenders>
+    <loggers>
+
+        <logger name="FindedStationLogger" level="info">
+            <appender-ref ref="FindedSatation"/>
+        </logger>
+
+        <logger name="ErrorStationLogger" level="info">
+            <appender-ref ref="ErrorStation"/>
+        </logger>
+
+        <logger name="errorLogLogger" level="error">
+            <appender-ref ref="errorLog"/>
+        </logger>
+
+        <root level="info">
+            <appender-ref ref="Console"/>
+        </root>
+    </loggers>
+</configuration>
